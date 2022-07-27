@@ -18,10 +18,58 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
-  .container > * {
-    padding: 40px;
-    font-size: 3rem; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .heading-2--light {
+    color: #9D9D9D; }
+  .heading-2--dark {
+    color: #2e2d2d; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #79B4B7;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #9D9D9D; }
+  .heading-4--dark {
+    color: #2e2d2d; }
+
+.btn {
+  background-color: #79B4B7;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: #587b7c; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
 
 .header {
   background-color: #FEFBF3;
@@ -42,7 +90,13 @@ body {
 
 .aboutMe__content {
   background-color: color-secondary;
-  grid-column: col-start 5 / full-end; }
+  grid-column: col-start 5 / full-end;
+  padding: 6rem 12rem; }
+
+.aboutMe__text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 4rem; }
 
 .gallery {
   background-color: #F8F0DF;
@@ -53,8 +107,11 @@ body {
   grid-column: col-start 7 / full-end; }
 
 .projects {
-  background-color: #9D9D9D;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem; }
 
 .experience {
   background-color: #79B4B7;
