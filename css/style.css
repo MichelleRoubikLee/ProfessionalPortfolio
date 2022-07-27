@@ -14,3 +14,35 @@ body {
   color: #2e2d2d;
   font-weight: 300;
   line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; }
+
+.header {
+  background-color: #FEFBF3; }
+
+.footer {
+  background-color: #9D9D9D; }
+
+.sidebar {
+  background-color: #79B4B7; }
+
+.aboutMe__pictures {
+  background-color: #79B4B7; }
+
+.aboutMe__content {
+  background-color: color-secondary; }
+
+.gallery {
+  background-color: #F8F0DF; }
+
+.skills {
+  background-color: #F8F0DF; }
+
+.projects {
+  background-color: #9D9D9D; }
+
+.experience {
+  background-color: #79B4B7; }
