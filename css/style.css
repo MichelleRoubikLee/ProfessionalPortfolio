@@ -18,31 +18,44 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  .container > * {
+    padding: 40px;
+    font-size: 3rem; }
 
 .header {
-  background-color: #FEFBF3; }
+  background-color: #FEFBF3;
+  grid-column: full-start / col-end 6; }
 
 .footer {
-  background-color: #9D9D9D; }
+  background-color: #9D9D9D;
+  grid-column: full-start / full-end; }
 
 .sidebar {
-  background-color: #79B4B7; }
+  background-color: #79B4B7;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1; }
 
 .aboutMe__pictures {
-  background-color: #79B4B7; }
+  background-color: #79B4B7;
+  grid-column: full-start / col-end 4; }
 
 .aboutMe__content {
-  background-color: color-secondary; }
+  background-color: color-secondary;
+  grid-column: col-start 5 / full-end; }
 
 .gallery {
-  background-color: #F8F0DF; }
+  background-color: #F8F0DF;
+  grid-column: full-start / full-end; }
 
 .skills {
-  background-color: #F8F0DF; }
+  background-color: #F8F0DF;
+  grid-column: col-start 7 / full-end; }
 
 .projects {
-  background-color: #9D9D9D; }
+  background-color: #9D9D9D;
+  grid-column: center-start / center-end; }
 
 .experience {
-  background-color: #79B4B7; }
+  background-color: #79B4B7;
+  grid-column: center-start / center-end; }

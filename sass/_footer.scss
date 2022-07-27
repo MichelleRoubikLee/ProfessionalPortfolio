@@ -1,3 +1,4 @@
 .footer {
-    background-color: $color-grey
+    background-color: $color-grey;
+    grid-column: full-start / full-end;
 }
