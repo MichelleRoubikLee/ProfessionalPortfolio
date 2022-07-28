@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #2e2d2d;
+  color: #242424;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -31,7 +31,7 @@ body {
   .heading-2--light {
     color: #9D9D9D; }
   .heading-2--dark {
-    color: #2e2d2d; }
+    color: #242424; }
 
 .heading-3 {
   font-size: 1.6rem;
@@ -43,7 +43,7 @@ body {
   .heading-4--light {
     color: #9D9D9D; }
   .heading-4--dark {
-    color: #2e2d2d; }
+    color: #242424; }
 
 .btn {
   background-color: #79B4B7;
@@ -57,7 +57,7 @@ body {
   cursor: pointer;
   transition: all .2s; }
   .btn:hover {
-    background-color: #587b7c; }
+    background-color: #1b3434; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -131,11 +131,23 @@ body {
 
 .projects {
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.project {
+  background-color: #edf9f9; }
+  .project__img {
+    width: 100%; }
+  .project__language svg, .project__description svg, .project__link svg {
+    fill: #1b3434;
+    height: 2rem;
+    width: 2rem; }
+
+.experiences {
+  grid-column: center-start / center-end;
   margin: 15rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem; }
-
-.experience {
-  background-color: #79B4B7;
-  grid-column: center-start / center-end; }

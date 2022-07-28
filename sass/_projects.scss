@@ -1,11 +1,35 @@
 .projects {
     grid-column: center-start / center-end;
-
-    margin: 15rem;
-
+    margin: 15rem 0;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 6rem;
-
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 7rem;
 }
 
+
+.project {
+    background-color: $color-primary-light;
+
+    &__img {
+        width: 100%
+    }
+
+    &__language,
+    &__description,
+    &__link {
+
+        svg {
+            fill: $color-primary-dark;
+            height: 2rem;
+            width: 2rem;
+        }
+
+        p {
+
+        }
+
+    }
+    &__github {
+
+    }
+}

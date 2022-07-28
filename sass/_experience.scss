@@ -1,4 +1,9 @@
-.experience {
-    background-color: $color-primary;
+.experiences {
     grid-column: center-start / center-end;
+
+    margin: 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 6rem;
 }
