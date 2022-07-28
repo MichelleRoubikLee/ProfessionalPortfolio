@@ -87,15 +87,25 @@ body {
 .aboutMe__pictures {
   background-color: #79B4B7;
   grid-column: full-start / col-end 4;
+  background-image: linear-gradient(rgba(121, 180, 183, 0.9), rgba(121, 180, 183, 0.5)), url(../img/waterWallpaper.jpg);
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center; }
 
 .aboutMe__img--1 {
-  width: 100%; }
+  width: 115%;
+  grid-row: 2 / 6;
+  grid-column: 7 / 13;
+  z-index: 20;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
 
 .aboutMe__img--2 {
-  width: 100%; }
+  width: 100%;
+  grid-row: 1 / -1;
+  grid-column: 2 / 12;
+  z-index: 10;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3); }
 
 .aboutMe__content {
   background-color: #FEFBF3;
