@@ -24,6 +24,11 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  font-size: 4.5rem;
+  color: #F8F0DF;
+  line-height: 1; }
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -72,8 +77,46 @@ body {
   margin-bottom: 8rem; }
 
 .header {
-  background-color: #FEFBF3;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(27, 52, 52, 0.9), rgba(27, 52, 52, 0.8)), url(../img/mountainHike.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  row-gap: 1.5rem;
+  justify-content: center; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center;
+    fill: #79B4B7; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
+  .header__findMe-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    font-size: 1.6rem;
+    gap: 1.5rem;
+    align-items: center;
+    color: #cecece; }
+    .header__findMe-text::before, .header__findMe-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__findMe-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center; }
+    .header__findMe-logos svg {
+      height: 5rem;
+      width: 5rem;
+      fill: #9D9D9D;
+      filter: brightness(90%); }
 
 .footer {
   background-color: #1b3434;
