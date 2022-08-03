@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -17,8 +20,12 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 80vh minmax(min-content, 40vw) repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh minmax(min-content, 40vw) repeat(2, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -62,7 +69,8 @@ body {
   cursor: pointer;
   transition: all .2s; }
   .btn:hover {
-    background-color: #1b3434; }
+    background-color: #1b3434;
+    transform: translateY(-3px); }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -77,31 +85,42 @@ body {
   margin-bottom: 8rem; }
 
 .header {
-  grid-column: full-start / col-end 6;
+  grid-column: full-start / full-end;
   background-image: linear-gradient(rgba(27, 52, 52, 0.9), rgba(27, 52, 52, 0.8)), url(../img/mountainHike.jpg);
   background-size: cover;
   background-position: center;
   padding: 8rem;
   padding-top: 4rem;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 0.5fr 0.5fr;
   row-gap: 1.5rem;
   justify-content: center; }
   .header__logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
     height: 3rem;
-    justify-self: center;
-    fill: #79B4B7; }
+    width: 4rem;
+    fill: #79B4B7;
+    justify-self: end; }
+  .header__name {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: start;
+    padding-top: .5rem; }
+  .header__tag {
+    grid-column: 1 / 3; }
   .header__btn {
-    align-self: start;
-    justify-self: start; }
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / 3; }
   .header__findMe-text {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     font-size: 1.6rem;
     gap: 1.5rem;
     align-items: center;
-    color: #cecece; }
+    color: #cecece;
+    grid-column: 1 / 3; }
     .header__findMe-text::before, .header__findMe-text::after {
       content: "";
       height: 1px;
@@ -111,12 +130,13 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    justify-items: center; }
+    justify-items: center;
+    grid-column: 1 / 3;
+    align-items: center; }
     .header__findMe-logos svg {
-      height: 5rem;
-      width: 5rem;
-      fill: #9D9D9D;
-      filter: brightness(90%); }
+      max-height: 5rem;
+      max-width: 5rem;
+      fill: #9D9D9D; }
 
 .footer {
   background-color: #1b3434;
@@ -152,9 +172,15 @@ body {
 .sidebar {
   background-color: #79B4B7;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1;
+  grid-row: 1 / 6;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-content: flex-end;
+      align-items: center; } }
 
 .nav-btn {
   border: none;
@@ -173,15 +199,28 @@ body {
     transform: translateY(-1.5rem); }
   .nav-btn::after {
     transform: translateY(1.3rem); }
+  @media only screen and (max-width: 62.5em) {
+    .nav-btn {
+      margin-top: 0;
+      margin-right: 3rem; }
+      .nav-btn::before {
+        transform: translateY(-1.2rem); }
+      .nav-btn::after {
+        transform: translateY(1rem); } }
 
 .aboutMe__pictures {
   background-color: #79B4B7;
   grid-column: full-start / col-end 4;
   background-image: linear-gradient(rgba(121, 180, 183, 0.9), rgba(121, 180, 183, 0.5)), url(../img/waterWallpaper.jpg);
+  background-size: cover;
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(12, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .aboutMe__pictures {
+      grid-column: 1 / -1;
+      padding: 6rem; } }
 
 .aboutMe__img--1 {
   width: 115%;
@@ -189,35 +228,40 @@ body {
   grid-column: 7 / 13;
   z-index: 20;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 50em) {
+    .aboutMe__img--1 {
+      grid-column: 7 / -1;
+      grid-row: 1 / -1;
+      width: 100%; } }
 
 .aboutMe__img--2 {
   width: 100%;
-  grid-row: 1 / -1;
+  grid-row: 1 / 12;
   grid-column: 2 / 12;
   z-index: 10;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 50em) {
+    .aboutMe__img--2 {
+      grid-column: 1 / 9;
+      grid-row: 1 / -1; } }
 
 .aboutMe__content {
   background-color: #FEFBF3;
-  grid-column: col-start 5 / full-end;
+  grid-column: col-start 5/ full-end;
   padding: 6rem 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 50em) {
+    .aboutMe__content {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5; } }
 
 .aboutMe__text {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 4rem; }
-
-.gallery {
-  background-color: #F8F0DF;
-  grid-column: full-start / full-end; }
-
-.skills {
-  background-color: #F8F0DF;
-  grid-column: col-start 7 / full-end; }
 
 .projects {
   grid-column: center-start / center-end;
