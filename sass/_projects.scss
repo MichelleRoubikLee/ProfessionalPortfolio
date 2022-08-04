@@ -22,6 +22,8 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap: 2rem;
+    grid-template-rows: 55% 25% 20%;
+    
 
     &__img {
         width: 100%;
@@ -64,6 +66,7 @@
         margin-top: 2rem;
         margin-left: 2rem;
         font-size: 1.5rem;
+        z-index: 10;
         svg {
             fill: $color-primary-dark;
             height: 2rem;

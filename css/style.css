@@ -299,7 +299,8 @@ body {
   background-color: #edf9f9;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 2rem; }
+  grid-row-gap: 2rem;
+  grid-template-rows: 55% 25% 20%; }
   .project__img {
     width: 100%;
     grid-column: 1 / -1;
@@ -333,7 +334,8 @@ body {
     align-items: center;
     margin-top: 2rem;
     margin-left: 2rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    z-index: 10; }
     .project__language svg, .project__description svg {
       fill: #1b3434;
       height: 2rem;
