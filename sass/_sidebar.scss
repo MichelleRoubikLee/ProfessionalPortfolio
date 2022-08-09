@@ -1,7 +1,7 @@
 .sidebar {
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
-    grid-row: 1 / 6;
+    grid-row: 1 / 7;
     display:flex;
     justify-content: center;
 
@@ -22,6 +22,10 @@
     width: 4.5rem;
     margin-top: 4rem;
     
+    &:hover {
+        background-color: $color-primary-dark;
+        //need before and after hover effect
+    }
 
     &::before,
     &::after {
@@ -30,6 +34,7 @@
         width: 4.5rem;
         content: "";
         display: block;
+
     }
 
     &::before{
