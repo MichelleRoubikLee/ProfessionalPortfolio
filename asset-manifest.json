@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/MichelleRoubikLee/ProfessionalPortfolio/static/css/main.b273fa05.css",
-    "main.js": "/MichelleRoubikLee/ProfessionalPortfolio/static/js/main.8c8e6b7c.js",
-    "static/media/MichelleHiking.JPG": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/MichelleHiking.fa03a15880352c1eb065.JPG",
-    "static/media/ireland2.jpg": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/ireland2.f2766e2af702026c9380.jpg",
-    "static/media/waterWallpaper.jpg": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/waterWallpaper.e17b72b106824516beb8.jpg",
-    "static/media/MichelleLondon.jpg": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/MichelleLondon.7168f2491ef773c732b7.jpg",
-    "static/media/MentalHealthGraph.png": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/MentalHealthGraph.b182f9a125c09d415a7e.png",
-    "static/media/bookreview.png": "/MichelleRoubikLee/ProfessionalPortfolio/static/media/bookreview.489328f5f8d22d000475.png",
-    "index.html": "/MichelleRoubikLee/ProfessionalPortfolio/index.html",
-    "main.b273fa05.css.map": "/MichelleRoubikLee/ProfessionalPortfolio/static/css/main.b273fa05.css.map",
-    "main.8c8e6b7c.js.map": "/MichelleRoubikLee/ProfessionalPortfolio/static/js/main.8c8e6b7c.js.map"
+    "main.css": "/ProfessionalPortfolio/static/css/main.f4a96af4.css",
+    "main.js": "/ProfessionalPortfolio/static/js/main.56c928cd.js",
+    "static/media/MichelleHiking.JPG": "/ProfessionalPortfolio/static/media/MichelleHiking.fa03a15880352c1eb065.JPG",
+    "static/media/ireland2.jpg": "/ProfessionalPortfolio/static/media/ireland2.f2766e2af702026c9380.jpg",
+    "static/media/waterWallpaper.jpg": "/ProfessionalPortfolio/static/media/waterWallpaper.e17b72b106824516beb8.jpg",
+    "static/media/MichelleLondon.jpg": "/ProfessionalPortfolio/static/media/MichelleLondon.7168f2491ef773c732b7.jpg",
+    "static/media/MentalHealthGraph.png": "/ProfessionalPortfolio/static/media/MentalHealthGraph.b182f9a125c09d415a7e.png",
+    "static/media/bookreview.png": "/ProfessionalPortfolio/static/media/bookreview.489328f5f8d22d000475.png",
+    "index.html": "/ProfessionalPortfolio/index.html",
+    "main.f4a96af4.css.map": "/ProfessionalPortfolio/static/css/main.f4a96af4.css.map",
+    "main.56c928cd.js.map": "/ProfessionalPortfolio/static/js/main.56c928cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.b273fa05.css",
-    "static/js/main.8c8e6b7c.js"
+    "static/css/main.f4a96af4.css",
+    "static/js/main.56c928cd.js"
   ]
 }
